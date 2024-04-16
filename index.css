@@ -17,7 +17,7 @@ p, h2 {
     font-family: 'Open Sans';
     margin: auto;
     border-style: dashed;
-    color: hsla(0, 0%, 0%, 0);
+    color: hsl(0, 0%, 0%);
     margin: 10px auto;
     border-radius: 5rem;
     border-color: black;
