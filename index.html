@@ -5,18 +5,33 @@
 
     <meta charset="utf-8">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
   </head>
+  <style>
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
   <body>
     <header>
+        <div class="hidden">
+            Hidden text
+        </div>
         <nav>
             <ul>
                 <li> 
-                    <a href="#main-section">Main Section</a>
+                    <a style="font-style: italic;" href="#main-section">Main Section</a>
                 </li>
             </ul>
         </nav>
         <h1> Meeting Minutes </h1>
-        Logo
+        <p id="logo-text">Logo</p>
         <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="logo" width="100">
         <br>
         Our Mission (video) 
@@ -26,9 +41,13 @@
         Our Mission (audio)
         <audio controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
     </header>
+    <div id="absolute">
+        Absolute Title.
+    </div>
     <main>
        <section id="main-section">
             <h2> Main Content</h2>
+            <div #id="marker"></div>
             <h3> Future Plans</h3>
             <div>
                 This is the start of the future plans divider.
@@ -41,17 +60,20 @@
 
                 </p>
                 <h3> Tasks </h3>
-                <ol>
-                    <li> Task 1 
-                        <details>
-                            <summary> Task 1 Details </summary>
-                            We will start task 1 on Friday.
-                        </details>
+                <div id="ol-holder">
+                    <ol>
+                        <li id=""> Task 1 
+                            <details>
+                                <summary> Task 1 Details </summary>
+                                We will start task 1 on Friday.
+                            </details>
 
-                    </li>
-                    <li> Task 2 </li>
-                    <li> Task 3 </li>
-                </ol>
+                        </li>
+                        <li> Task 2 </li>
+                        <li> Task 3 </li>
+                        <li> Task 4 </li>
+                    </ol>
+                </div>
                 This is the end of the future plans divider.
             </div>
        </section>
@@ -64,30 +86,30 @@
                     </legend>
 
                     <input type="text" placeholder="name">
-                    <br>
                     <label>Birthday</label>
                     <input type="date">
-                    <br>
 
                     <label>Role</label>
-                    <br>
-                    <input name="role" type="radio" value="Developer" id="developer">
-                    <label for="developer">Developer</label>
-                    <br>
-                    <input name="role" type="radio" value="Leader" id="leader"> 
-                    <label for="leader">Radio</label>
+                    <div>
+                        <input name="role" type="radio" value="Developer" id="developer">
+                        <label for="developer">Developer</label>
+                    </div>
+                    <div>
+                        <input name="role" type="radio" value="Leader" id="leader">
+                        <label for="leader">Radio</label>
+                    </div>
 
                     <br>
 
                     <label>Interested Topics</label>
-                    <br>
-                    <input name="topics" type="checkbox" value="frontend" id="frontend">
-                    <label for="frontend">Frontend</label>
-                    <br>
+                    <div>
+                        <input name="topics" type="checkbox" value="frontend" id="frontend">
+                        <label for="frontend">Frontend</label>
+                    </div>
+                    <div>
                     <input name="topics" type="checkbox" value="backend" id="backend"> 
                     <label for="backend">Backend</label>
-
-                    <br>
+                    </div>
 
                     Favorite Color
                     <input list="colors">
@@ -95,7 +117,6 @@
                         <option value="Red"></option>
                         <option value="Blue"></option>
                     </datalist>
-                    <br>
                     Year
                     <select>
                         <option>Freshman</option>

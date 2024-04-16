@@ -1,0 +1,155 @@
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: content-box;
+    text-align: center;
+    --theme: color(display-p3 1 1 0.8);
+}
+
+body {
+    background-color: var(--theme, #fff);
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* apply custom font */
+p, h2 {
+    font-family: 'Open Sans';
+    margin: auto;
+    border-style: dashed;
+    color: hsla(0, 0%, 0%, 0);
+    margin: 10px auto;
+    border-radius: 5rem;
+    border-color: black;
+    border-width: 0.5em;
+    min-width: 5cm;
+    max-width: 200mm;
+}
+
+#absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 40px;
+    background-color: #fff;
+    color: #33F;
+    text-align: center;
+}
+
+h1 {
+    background-color: #fff;
+    position: sticky;
+    top: 10px;
+    color: #33F;
+}
+
+a[href="#main-section"] {
+    display: inline;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: solid 1px;
+    color: rgb(0, 250, 100);
+    text-decoration: underline;
+}
+
+
+div.hidden {
+    display: none;
+}
+
+/* text of the logo */
+#logo-text {
+    margin: 10px;
+    background-color: red;
+}
+
+ol {
+    display: grid;
+    grid-template-rows: 80px 80px;
+    grid-template-columns: 180px 180px;
+}
+ol li {
+    list-style-type: none;
+}
+
+div + h3 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#ol-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button:hover {
+    box-shadow: 0 0 3px 3px black;
+}
+
+button:active {
+    box-shadow: 0 0 5px 5px black;
+}
+
+audio, video {
+    display: block;
+    width: 400px;
+    min-height: 80px !important;
+    max-height: 200px;
+    padding: 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-self: center;
+    padding: 20px;
+    margin: auto;
+}
+
+label ~ textarea {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+fieldset:has(> legend) {
+    border: 4px solid black;
+    border-radius: 10px;
+}
+fieldset:has(> legend) * {
+    font-family: 'Open Sans';
+}
+fieldset {
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    audio, video {
+        width: 200px;
+    }
+
+    h2 {
+        max-width: 400px;
+    }
+    
+}
